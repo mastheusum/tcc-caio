@@ -144,7 +144,7 @@ a {
     text-decoration: none;
     transition: all 0.3s ease; 
 }
-a:hover { color:#009999 !important; }
+a:hover { color:#009999 !important  ; }
 .container-fluid { max-width: 1770px; }
 .tm-container-small { max-width: 1050px; }
 .btn { border-radius: 0; }

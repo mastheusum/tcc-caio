@@ -1,8 +1,9 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+//import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Titulo from '../Components/Titulo';
 import Procurar from '../Components/Procurar';
-import Filmes from '../Components/Filmes';
+import Galeria from '../Components/Galeria';
+import Footer from '../Components/Footer';
 
 
 const Rotas = () => {
@@ -10,7 +11,8 @@ const Rotas = () => {
         <>
             <Titulo/>      
             <Procurar/>
-            <Filmes/>
+            <Galeria/>
+            <Footer/>
         </>
     );
 }
