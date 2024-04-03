@@ -1,18 +1,17 @@
 import React from 'react';
-//import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Titulo from '../Components/Titulo';
-import Procurar from '../Components/Procurar';
-import Galeria from '../Components/Galeria';
-import Footer from '../Components/Footer';
-
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Index from '../Pages/Index';
+import Filme from '../Pages/Filme';
 
 const Rotas = () => {
     return (
         <>
-            <Titulo/>      
-            <Procurar/>
-            <Galeria/>
-            <Footer/>
+            <BrowserRouter>
+                <Routes>
+                    <Route index path='/' element={ <Index/> }/>
+                    <Route path='/Filme' element={<Filme/>}/>
+                </Routes>
+            </BrowserRouter>
         </>
     );
 }

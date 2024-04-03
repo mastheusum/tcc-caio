@@ -6,7 +6,7 @@ export default function Titulo() {
             <nav className="navbar navbar-expand-lg">
                 <div className="container-fluid">
                     <a className="navbar-brand" href="#">
-                        <i className="fas fa-film mr-2"></i>
+                        <i className="bi bi-film"></i>
                         Streaming do Caio
                     </a>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
