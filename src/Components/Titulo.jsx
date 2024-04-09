@@ -5,7 +5,7 @@ export default function Titulo() {
     return(
             <nav className="navbar navbar-expand-lg">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="#">
+                    <a className="navbar-brand" href="/">
                         <i className="bi bi-film"></i>
                         Streaming do Caio
                     </a>

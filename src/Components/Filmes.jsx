@@ -7,7 +7,7 @@ export default function Filmes(props) {
                 <img src={props.image} alt={props.title} className="img-fluid"/>
                 <figcaption className="d-flex align-items-center justify-content-center">
                     <h2>{props.title}</h2>
-                    <a href="photo-detail.html">Veja mais</a>
+                    <a href={"/Filme/"+(parseInt(props.id).toString())}>Veja mais</a>
                 </figcaption>                    
             </figure>
             <div className="d-flex justify-content-between tm-text-gray">

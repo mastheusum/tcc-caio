@@ -6,7 +6,7 @@ export default function FilmesGerais() {
   return (
     <>
         <div class="container-fluid tm-container-content tm-mt-60">
-            <TituloFilme/>
+            <TituloFilme/>      
             <Filmesconfig/>
         </div>
     </>

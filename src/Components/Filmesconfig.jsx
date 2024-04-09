@@ -1,8 +1,25 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import DescricaoFilme from './DescricaoFilme'
 import GeneroFilme from './GeneroFilme'
+import { useParams } from 'react-router-dom'
+import axios from 'axios'
+import FilmeModelo from '../Data/FilmeModelo'
 
 export default function Filmesconfig() {
+  const { filmeId } = useParams()
+
+  const [filme, setFilme] = useState(FilmeModelo)
+
+  useEffect( ()=>{
+    axios.get("http://10.0.0.163/api/v1/movies/"+filmeId)
+    .then( (resposta)=>{
+      setFilme(resposta.data)
+    })
+    .catch( (error)=> {
+      console.log(error)
+    })
+  }, [] )
+
   return (
     <>
         <div class="row tm-mb-90">
@@ -12,7 +29,13 @@ export default function Filmesconfig() {
                      <GeneroFilme/>
                  </div>
              </div>
-             <img src="img\Filme-01.jpg" alt="Image" class="img-fluid" id="fotoAmostra"></img>
+             <iframe width="560" height="315" 
+            src={filme.video_url} 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+
+            </iframe>
         </div>
     </>
   )

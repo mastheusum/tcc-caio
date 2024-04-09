@@ -1,12 +1,21 @@
-import React, { useState } from 'react'
-import FilmeModelo from '../Data/FilmeModelo'
+import React, { useEffect, useState } from 'react'
 import Filmes from './Filmes'
+import axios from 'axios'
 
 export default function Galeria() {
 
-    const [movies, setMovies] = useState([FilmeModelo, FilmeModelo, FilmeModelo])
+    const [movies, setMovies] = useState([])
 
-    
+    useEffect(()=>{
+        axios.get("http://10.0.0.163/api/v1/movies")
+        .then( (response)=> {
+            console.log(response.data)
+            setMovies(response.data)
+        })
+        .catch( (error)=> {
+            console.log(error);
+        })
+    }, [])
 
   return (
     <>
@@ -18,7 +27,7 @@ export default function Galeria() {
             {
                 movies.map( (movie) => {
                     return(
-                        <Filmes key={movie.title} title={movie.title} image={movie.image} date={movie.date} views={movie.views}/>
+                        <Filmes key={movie.id} id={movie.id} title={movie.title} image={movie.image} date={movie.date} views={movie.views}/>
                     )
                 })
             }
