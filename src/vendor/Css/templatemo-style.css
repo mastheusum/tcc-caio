@@ -579,6 +579,19 @@ select:not([multiple]) {
     opacity: 1; /* Firefox */
 }
 
+label.formulario{
+    color: rgb(31, 134, 202) !important;
+    margin: auto;
+    width: 7%;
+    border: 3px solid gray;
+    padding: 10px;
+}
+.digite_aqui{
+    background-color: rgb(31, 62, 202);
+    color: white;
+    margin: auto;
+}
+
 @media (max-width: 991px) {
     .navbar-collapse {
         position: fixed;

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import FilmeModelo from '../Data/FilmeModelo'
 import axios from 'axios'
 
+
 export default function CadastroFilme() {
 
     const [filme, setFilme] = useState(FilmeModelo)
@@ -27,32 +28,32 @@ export default function CadastroFilme() {
 
   return (
     <>
-        <form onSubmit={ cadastrarFilme }>
-            <label htmlFor="title">Título</label>
-            <input onchange={Mudar} type="text" name="title" id="title" />
+        <form onSubmit={ cadastrarFilme }> 
+            <label htmlFor="title" className='formulario'>Título</label>
+            <input onchange={Mudar} type="text" name="title" id="title" className='digite_aqui'/>
             <br />            
 
-            <label htmlFor="description">Descrição</label>
-            <input onchange={Mudar} type="text" name="description" id="description" />
+            <label htmlFor="description" className='formulario'>Descrição</label>
+            <input onchange={Mudar} type="text" name="description" id="description" className='digite_aqui' />
             <br />
 
-            <label htmlFor="date">Data</label>
-            <input onchange={Mudar} type="date" name="date" id="date" />
+            <label htmlFor="date" className='formulario'>Data</label>
+            <input onchange={Mudar} type="date" name="date" id="date" className='digite_aqui'/>
             <br />
 
-            <label htmlFor="views">Visualizações</label>
-            <input onchange={Mudar} type="number" name="views" id="views" />
+            <label htmlFor="views" className='formulario'>Visualizações</label>
+            <input onchange={Mudar} type="number" name="views" id="views"  className='digite_aqui'/>
             <br />
 
-            <label htmlFor="image">URL da Image</label>
-            <input onchange={Mudar} type="text" name="image" id="image" />
+            <label htmlFor="image" className='formulario'>URL da Image</label>
+            <input onchange={Mudar} type="text" name="image" id="image"  className='digite_aqui'/>
             <br />
 
-            <label htmlFor="video_url">Vídeo</label>
-            <input onchange={Mudar} type="text" name="video_url" id="video_url" />
+            <label htmlFor="video_url" className='formulario'>Vídeo</label>
+            <input onchange={Mudar} type="text" name="video_url" id="video_url"  className='digite_aqui'/>
             <br />
 
-            <input type="submit" value="Cadastrar" />
+            <input type="submit" value="Cadastrar" className='digite_aqui'/>
         </form>
     </>
   )

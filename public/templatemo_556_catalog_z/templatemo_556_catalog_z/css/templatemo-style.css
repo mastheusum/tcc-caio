@@ -585,6 +585,7 @@ select:not([multiple]) {
     opacity: 1; /* Firefox */
 }
 
+
 @media (max-width: 991px) {
     .navbar-collapse {
         position: fixed;
@@ -637,4 +638,5 @@ select:not([multiple]) {
 
     .tm-social-links li { margin-right: 3px; }
 }
+
 
