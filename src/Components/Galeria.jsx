@@ -4,6 +4,7 @@ import axios from 'axios'
 
 export default function Galeria() {
 
+
     const [movies, setMovies] = useState([])
 
     useEffect(()=>{
