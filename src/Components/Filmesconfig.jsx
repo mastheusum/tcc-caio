@@ -11,7 +11,7 @@ export default function Filmesconfig() {
   const [filme, setFilme] = useState(FilmeModelo)
 
   useEffect( ()=>{
-    axios.get("http://10.0.0.163/api/v1/movies/"+filmeId)
+    axios.get("http://10.0.0.161/api/v1/movies/"+filmeId)
     .then( (resposta)=>{
       setFilme(resposta.data)
     })

@@ -5,7 +5,7 @@ import axios from 'axios';
 export default function GerenciaFilmes() {
     const [movies, setMovies] = useState([])
     useEffect(()=>{
-        axios.get("http://26.69.31.80:80/api/v1/movies")
+        axios.get("http://10.0.0.161/api/v1/movies")
         .then( (response)=> {
             setMovies(response.data)
         })

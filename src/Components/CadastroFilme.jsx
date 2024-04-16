@@ -18,7 +18,7 @@ export default function CadastroFilme() {
         delete filme['id']
         filme['date'] = new Date(filme['date'])
         
-        axios.post("http://26.69.31.80:80/api/v1/movies", {"api_v1_movie":filme})
+        axios.post("http://10.0.0.161/api/v1/movies/", {"api_v1_movie":filme})
         console.log(FilmeModelo)
         setFilme(FilmeModelo)
         
