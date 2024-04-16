@@ -582,6 +582,7 @@ select:not([multiple]) {
 
 label.formulario{
     color: rgb(31, 134, 202) !important;
+    background-color: #000000;
     margin: auto;
     width: 7%;
     border: 3px solid gray;
@@ -591,6 +592,20 @@ label.formulario{
     background-color: rgb(31, 62, 202);
     color: white;
     margin: auto;
+}
+
+.excluir{
+    background-color: red;
+    color: #000000;
+    margin: auto;
+    padding: 10px;
+    width: 7%;
+    border: 3px solid rgba(255, 255, 0, 0.5);
+}
+
+.separa{
+    background-color: #0060fc8c;
+    margin-top: 20px;
 }
 
 @media (max-width: 991px) {
